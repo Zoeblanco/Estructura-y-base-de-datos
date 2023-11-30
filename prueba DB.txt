@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS Evaluaciones;
+
+USE Evaluaciones;
+CREATE TABLE materias (
+id INT AUTO_INCREMENT PRIMARY KEY,
+    Materia VARCHAR(255),
+    Profesor VARCHAR(255),
+    Nota BOOLEAN
+    );
+   
+
+CREATE TABLE Estudiantes (
+    idAlumno INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(255),
+    Apellido varchar()255,
+    DNI VARCHAR(255),
+    Edad INT,
+    materiaID VARCHAR(255) NOT NULL,
+	foreign key (materiaID) references materias(ID)
+);
